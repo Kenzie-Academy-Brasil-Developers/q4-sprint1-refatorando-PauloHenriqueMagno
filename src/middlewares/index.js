@@ -1,9 +1,9 @@
-import validate from './validateMiddleware.js';
-import authenticateCompany from './authenticateCompanyMiddleware.js';
-import verifyVehicleExistence from './verifyVehicleExistenceMiddleware.js';
-import verifyCompanyExistence from './verifyCompanyExistenceMiddleware.js';
-import verifyDuplicateVehiclePlate from './verifyDuplicateVehiclePlateMiddleware.js';
-import verifyDuplicateCnpj from './verifyDuplicateCnpjMiddleware.js';
+import validate from './validateMiddleware';
+import authenticateCompany from './authenticateCompanyMiddleware';
+import verifyVehicleExistence from './verifyVehicleExistenceMiddleware';
+import verifyCompanyExistence from './verifyCompanyExistenceMiddleware';
+import verifyDuplicateVehiclePlate from './verifyDuplicateVehiclePlateMiddleware';
+import verifyDuplicateCnpj from './verifyDuplicateCnpjMiddleware';
 
 export {
   validate,
@@ -11,5 +11,5 @@ export {
   verifyVehicleExistence,
   verifyCompanyExistence,
   verifyDuplicateVehiclePlate,
-  verifyDuplicateCnpj
+  verifyDuplicateCnpj,
 };

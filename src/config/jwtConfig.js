@@ -1,6 +1,6 @@
 const jwtConfig = {
   secret: "segredo",
-  expiresIn: "604800"
-}
+  expiresIn: "604800",
+};
 
-export default jwtConfig
+export default jwtConfig;

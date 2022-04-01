@@ -1,4 +1,4 @@
-import { jest } from "@jest/globals";
+import { jest } from '@jest/globals';
 
 const mockNext = jest.fn();
 const mockReq = {};

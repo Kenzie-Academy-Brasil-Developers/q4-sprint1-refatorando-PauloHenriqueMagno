@@ -1,11 +1,9 @@
-import { companies } from "../../config/database.js";
+import { deleteCompanyService } from '../../services';
 
 const deleteCompany = (req, res) => {
-  const { cnpj } = req.params;
+  const companies = deleteCompanyService(req);
 
-  companies = companies.filter((company) => company.cnpj !== cnpj);
-
-  res.status(200).json({ messagem: "Company deleted", companies });
+  res.status(200).json({ messagem: 'Company deleted', companies });
 };
 
 export default deleteCompany;

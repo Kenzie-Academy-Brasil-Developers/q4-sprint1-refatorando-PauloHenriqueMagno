@@ -1,1 +1,3 @@
-export let companies = [];
+const companies = [];
+
+export default companies;

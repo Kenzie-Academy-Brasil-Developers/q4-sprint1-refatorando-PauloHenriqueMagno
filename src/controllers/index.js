@@ -1,21 +1,23 @@
-import registerCompany from './company/registerCompany.js';
-import loginCompany from './company/loginCompany.js';
-import getCompanies from './company/getCompanies.js';
-import modifyCompany from './company/modifyCompany.js';
-import deleteCompany from './company/deleteCompany.js';
-import registerCompanyVehicles from './company/registerCompanyVehicles.js';
-import getCompanyVehicles from './company/getCompanyVehicles.js';
-import modifyCompanyVehiclePlate from './company/modifyCompanyVehiclePlate.js';
-import deleteCompanyVehicle from './company/deleteCompanyVehicle.js';
+import registerCompany from './company/registerCompany';
+import loginCompany from './company/loginCompany';
+import getCompanies from './company/getCompanies';
+import modifyCompany from './company/modifyCompany';
+import deleteCompany from './company/deleteCompany';
+
+import registerCompanyVehicles from './vehicle/registerCompanyVehicles';
+import getCompanyVehicles from './vehicle/getCompanyVehicles';
+import modifyCompanyVehiclePlate from './vehicle/modifyCompanyVehiclePlate';
+import deleteCompanyVehicle from './vehicle/deleteCompanyVehicle';
 
 export {
-  deleteCompany,
-  deleteCompanyVehicle,
   getCompanies,
-  getCompanyVehicles,
   loginCompany,
   modifyCompany,
-  modifyCompanyVehiclePlate,
   registerCompany,
+  deleteCompany,
+
+  getCompanyVehicles,
+  modifyCompanyVehiclePlate,
   registerCompanyVehicles,
+  deleteCompanyVehicle,
 };

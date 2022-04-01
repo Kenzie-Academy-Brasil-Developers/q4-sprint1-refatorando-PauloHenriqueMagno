@@ -9,8 +9,8 @@ import {
   modifyCompany,
   modifyCompanyVehiclePlate,
   deleteCompany,
-  deleteCompanyVehicle
-} from '../controllers/index.js';
+  deleteCompanyVehicle,
+} from '../controllers/index';
 
 import {
   validate,
@@ -18,13 +18,13 @@ import {
   verifyDuplicateVehiclePlate,
   authenticateCompany,
   verifyCompanyExistence,
-  verifyVehicleExistence
-} from '../middlewares/index.js';
+  verifyVehicleExistence,
+} from '../middlewares/index';
 
 import {
   companySchema,
-  vehicleSchema
-} from '../models/index.js';
+  vehicleSchema,
+} from '../models/index';
 
 const route = Router();
 
@@ -33,12 +33,12 @@ const companiesRoutes = (app) => {
     '/register',
     validate(companySchema),
     verifyDuplicateCnpj,
-    registerCompany
+    registerCompany,
   );
 
   route.post(
     '/login',
-    loginCompany
+    loginCompany,
   );
 
   route.get('', getCompanies);
@@ -47,14 +47,14 @@ const companiesRoutes = (app) => {
     '/:cnpj',
     authenticateCompany,
     verifyCompanyExistence,
-    modifyCompany
+    modifyCompany,
   );
 
   route.delete(
-    ':cnpj',
+    '/:cnpj',
     authenticateCompany,
     verifyCompanyExistence,
-    deleteCompany
+    deleteCompany,
   );
 
   route.post(
@@ -63,14 +63,14 @@ const companiesRoutes = (app) => {
     verifyCompanyExistence,
     verifyDuplicateVehiclePlate,
     validate(vehicleSchema),
-    registerCompanyVehicles
+    registerCompanyVehicles,
   );
 
   route.get(
     "/:cnpj/vehicles",
     authenticateCompany,
     verifyCompanyExistence,
-    getCompanyVehicles
+    getCompanyVehicles,
   );
 
   route.put(
@@ -78,7 +78,7 @@ const companiesRoutes = (app) => {
     authenticateCompany,
     verifyCompanyExistence,
     verifyVehicleExistence,
-    modifyCompanyVehiclePlate
+    modifyCompanyVehiclePlate,
   );
 
   route.delete(
@@ -86,11 +86,10 @@ const companiesRoutes = (app) => {
     authenticateCompany,
     verifyCompanyExistence,
     verifyVehicleExistence,
-    deleteCompanyVehicle
+    deleteCompanyVehicle,
   );
 
+  app.use('/companies', route);
+};
 
-  app.use('/companies', route)
-}
-
-export default companiesRoutes
+export default companiesRoutes;

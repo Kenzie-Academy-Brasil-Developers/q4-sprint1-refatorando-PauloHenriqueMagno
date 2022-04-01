@@ -1,14 +1,9 @@
-import { companies } from "../../config/database.js";
+import { modifyCompanyService } from '../../services';
 
 const modifyCompany = (req, res) => {
-  const { company } = req;
-  const updatedCompany = { ...company, ...req.body };
+  const updatedCompany = modifyCompanyService(req);
 
-  const index = companies.indexOf(company);
-
-  companies[index] = updatedCompany;
-
-  res.status(200).json({ messagem: 'Company updated', companies });
+  res.status(200).json({ messagem: 'Company updated', updatedCompany });
 };
 
 export default modifyCompany;

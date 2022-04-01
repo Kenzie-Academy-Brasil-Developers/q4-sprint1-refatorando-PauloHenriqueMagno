@@ -1,5 +1,5 @@
-import vehicleSchema from './vehicleSchema.js';
-import companySchema from './companySchema.js';
+import vehicleSchema from './vehicleSchema';
+import companySchema from './companySchema';
 
 export {
   vehicleSchema,
